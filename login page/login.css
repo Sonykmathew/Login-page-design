@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('image.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 20px 100px;
+    z-index: 99;
+
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(10, 5, 52);
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500px;
+}
+
+
+.navbutton {
+    height: 30px;
+    width: 60px;
+    border: 2px solid;
+    border-radius: 6px;
+    margin-left: 20px;
+    background-color: transparent;
+    transition: .5s;
+
+}
+
+.navbutton:hover {
+    background: #fff;
+    color: rgb(83, 14, 151);
+}
+
+.box {
+    border-radius: 20px;
+    position: relative;
+    height: 350px;
+    width: 300px;
+    background: transparent;
+    border: 2px solid white;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transfrom .5s ease;
+}
+
+.box.active-popup {
+    transform: scale(1);
+}
+
+.box.active {
+    height: 450px;
+}
+
+.box .login-form {
+    width: 100%;
+    padding: 40px;
+
+}
+
+.icon-close {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background: white;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-bottom-left-radius: 6px; 
+    transition: .5s;  
+}
+
+.icon-close:hover {
+
+    background: rgb(125, 125, 202);
+}
+
+
+
+
+.box .login-form {
+    transition: transform .18s ease;
+    transform: translateX(0);
+
+}
+
+
+.box.active .login-form  {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.box .register-form {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+
+}
+
+.box.active .register-form  {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+
+.box h2 {
+    height: 60px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid white;
+    margin-bottom: 30px;
+}
+
+.input label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-weight: 500;
+    font-size: 1em;
+    pointer-events: none;
+
+}
+
+
+.input input:focus~label,
+.input input:valid~label {
+    top: 5px;
+
+}
+
+.input input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 35px 0 5px;
+
+}
+
+.input .icon {
+    position: absolute;
+    right: 8px;
+    line-height: 50px;
+}
+
+.loginbtn {
+    margin-left: 50px;
+    height: 35px;
+    width: 100px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: white;
+    transition: .5s;
+}
+
+.loginbtn:hover{
+    background: rgb(144, 144, 232);
+}
+
+
+.checkbox{
+    margin: -7px 0 7px;
+    font-size: .9em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox a {
+    color: black;
+    text-decoration: none;
+}
+
+.checkbox a:hover{
+    text-decoration: underline;
+}
+
+.noacct a {
+    height: 100%;
+    color: black;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+.noacct a:hover{
+    text-decoration: underline;
+}
+
+.register-form {
+    position: absolute;
+    transform: translateX(400px);
+}
